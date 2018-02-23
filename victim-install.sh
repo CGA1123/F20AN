@@ -31,8 +31,10 @@ git clone -q https://github.com/transmission/transmission.git
 cd transmission
 
 GIT_COMMIT="c8696df516fa92ee143f9b6e07b97a50558f628f"
-echo "Checking out vulnerable version (${GIT_COMMIT})"
+echo "-> Checking out vulnerable version (${GIT_COMMIT})"
 git checkout -q ${GIT_COMMIT}
+
+echo "-> Creating new branch 'vuln'"
 git checkout -q -b vuln
 
 echo "-> Cloning submodules..."
@@ -40,6 +42,8 @@ git submodule -q update --init
 
 echo "-> Creating ./build/ directory"
 mkdir build
+
+echo "-> Moving into build directory"
 cd build
 
 echo "-> Running cmake..."
@@ -60,11 +64,11 @@ echo "-> Checking if ~/.mozilla/firefox exists..."
 if [ ! -d "${HOME}/.mozilla/firefox" ]; then
 	echo "-> Firefox has never been started..."
 	echo "-> Starting firefox to create default configuration files..."
-	firefox &
+	firefox & FIREFOX_PID="$!"
 	echo "-> Sleeping while firefox starts..."
 	sleep 5
 	echo "-> Killing firefox..."
-	kill %1
+	kill $FIREFOX_PID
 else
 	echo "-> ~/.mozilla/firefox exists!"
 fi
