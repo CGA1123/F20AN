@@ -35,8 +35,7 @@ sudo apt -y -qq install \
 	libevent-dev \
 	libminiupnpc-dev \
 	libgtk-3-dev \
-	libappindicator3-dev \
-	net-tools
+	libappindicator3-dev
 
 cd $HOME
 
@@ -101,6 +100,15 @@ echo "-> Cleaning up..."
 rm -rf transmission
 
 echo "-> Setting IP to 10.0.2.20"
-sudo ifconfig enp0s3 10.0.2.20 netmask 255.255.255.0
+sudo tee -a /etc/network/interfaces > /dev/null <<EOF
+
+auto enp0s3
+iface enp0s3 inet static
+	address 10.0.2.20
+	netmask 255.255.255.0
+
+EOF
+
+sudo ifup enp0s3
 
 echo "-> DONE!"
