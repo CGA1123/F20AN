@@ -2,7 +2,7 @@ var timer;
 var count = 0;
 
 // parameters for attack
-var attacker = "192.168.0.78";
+var attacker = "10.0.2.30";
 var victim = "127.0.0.1";
 var interval = 5;
 
