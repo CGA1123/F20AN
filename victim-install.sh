@@ -63,10 +63,10 @@ echo "-> Running cmake..."
 cmake .. > /dev/null
 
 echo "-> Running make..."
-make --quiet > /dev/null
+make  > /dev/null 2>&1
 
 echo "-> Running sudo make install"
-sudo make --quiet install > /dev/null
+sudo make install > /dev/null 2>&1
 
 echo "-> Starting transmission-daemon"
 transmission-daemon
@@ -91,7 +91,7 @@ USER_PREFS="${HOME}/.mozilla/firefox/*.default"
 cd $USER_PREFS
 touch user.js
 echo "user_pref(\"network.dns.disablePrefetch\", true);" >> user.js
-echo "user_pref(\"network.dnsCacheExpirationPeriod\", 0);" >> user.js
+echo "user_pref(\"network.dnsCacheExpiration\", 0);" >> user.js
 echo "user_pref(\"network.dnsCacheExpirationGracePeriod\", 0);" >> user.js
 
 cd $HOME
