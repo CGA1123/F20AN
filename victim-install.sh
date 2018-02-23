@@ -8,8 +8,8 @@
 set -e
 
 echo "Installing required dependencies..."
-sudo apt update
-sudo apt install --yes --force-yes \
+sudo apt -qq update
+sudo apt -y -qq install \
 	git \
 	cmake \
 	libssl-dev \
@@ -24,8 +24,10 @@ sudo apt install --yes --force-yes \
 	libgtk-3-dev \
 	libappindicator3-dev
 
+cd $HOME
+
 echo "Cloning transmission/transmission"
-git clone https://github.com/transmission/transmission.git
+git clone -q https://github.com/transmission/transmission.git
 cd transmission
 
 GIT_COMMIT="c8696df516fa92ee143f9b6e07b97a50558f628f"
@@ -34,7 +36,7 @@ git checkout ${GIT_COMMIT}
 git checkout -b vuln
 
 echo "Cloning submodules..."
-git submodule update --init
+git submodule -q update --init
 
 echo "Creating ./build/ directory"
 mkdir build
@@ -44,18 +46,40 @@ echo "Running cmake..."
 cmake ..
 
 echo "Running make..."
-make
+make --quiet
 
 echo "Running sudo make install"
-sudo make install
+sudo make --quiet install
 
 echo "Starting transmission-daemon"
 transmission-daemon
 
 echo "Setting up firefox user.js for easier demo"
-USER_PREF_FILE="${HOME}/.mozilla/firefox/*.default/user.js"
-echo "user_pref(\"network.dns.disablePrefetch\", true);" >> ${USER_PREF_FILE}
-echo "user_pref(\"network.dnsCacheExpirationPeriod\", 0);" >> ${USER_PREF_FILE}
-echo "user_pref(\"network.dnsCacheExpirationGracePeriod\", 0);" >> ${USER_PREF_FILE}
+
+echo "Checking if ~/.mozilla/firefox exists..."
+if [ ! -d "${HOME}/.mozilla/firefox" ]; then
+	echo "Firefox has never been started..."
+	echo "Starting firefox to create default configuration files..."
+	firefox &
+	echo "Sleeping while firefox starts..."
+	sleep 5
+	echo "Killing firefox..."
+	kill %-
+else
+	echo "~/.mozilla/firefox exists!"
+fi
+
+
+USER_PREFS="${HOME}/.mozilla/firefox/*.default"
+cd $USER_PREFS
+touch user.js
+echo "user_pref(\"network.dns.disablePrefetch\", true);" >> user.js
+echo "user_pref(\"network.dnsCacheExpirationPeriod\", 0);" >> user.js
+echo "user_pref(\"network.dnsCacheExpirationGracePeriod\", 0);" >> user.js
+
+cd $HOME
+
+echo "Cleaning up..."
+rm -rf transmission
 
 echo "DONE!"
