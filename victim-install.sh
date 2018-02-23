@@ -7,7 +7,7 @@
 #
 set -e
 
-echo "Installing required dependencies..."
+echo "-> Installing required dependencies..."
 sudo apt -qq update
 sudo apt -y -qq install \
 	git \
@@ -26,7 +26,7 @@ sudo apt -y -qq install \
 
 cd $HOME
 
-echo "Cloning transmission/transmission"
+echo "-> Cloning transmission/transmission"
 git clone -q https://github.com/transmission/transmission.git
 cd transmission
 
@@ -35,38 +35,38 @@ echo "Checking out vulnerable version (${GIT_COMMIT})"
 git checkout ${GIT_COMMIT}
 git checkout -b vuln
 
-echo "Cloning submodules..."
+echo "-> Cloning submodules..."
 git submodule -q update --init
 
-echo "Creating ./build/ directory"
+echo "-> Creating ./build/ directory"
 mkdir build
 cd build
 
-echo "Running cmake..."
-cmake ..
+echo "-> Running cmake..."
+cmake .. > /dev/null
 
-echo "Running make..."
+echo "-> Running make..."
 make --quiet
 
-echo "Running sudo make install"
+echo "-> Running sudo make install"
 sudo make --quiet install
 
-echo "Starting transmission-daemon"
+echo "-> Starting transmission-daemon"
 transmission-daemon
 
-echo "Setting up firefox user.js for easier demo"
+echo "-> Setting up firefox user.js for easier demo"
 
-echo "Checking if ~/.mozilla/firefox exists..."
+echo "-> Checking if ~/.mozilla/firefox exists..."
 if [ ! -d "${HOME}/.mozilla/firefox" ]; then
-	echo "Firefox has never been started..."
-	echo "Starting firefox to create default configuration files..."
+	echo "-> Firefox has never been started..."
+	echo "-> Starting firefox to create default configuration files..."
 	firefox &
-	echo "Sleeping while firefox starts..."
+	echo "-> Sleeping while firefox starts..."
 	sleep 5
-	echo "Killing firefox..."
-	kill %-
+	echo "-> Killing firefox..."
+	kill %1
 else
-	echo "~/.mozilla/firefox exists!"
+	echo "-> ~/.mozilla/firefox exists!"
 fi
 
 
@@ -79,7 +79,7 @@ echo "user_pref(\"network.dnsCacheExpirationGracePeriod\", 0);" >> user.js
 
 cd $HOME
 
-echo "Cleaning up..."
+echo "-> Cleaning up..."
 rm -rf transmission
 
-echo "DONE!"
+echo "-> DONE!"
