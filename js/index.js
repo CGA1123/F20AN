@@ -31,12 +31,6 @@ window.addEventListener("message", function (msg) {
 		clearInterval(timer);
 		alert("Attack Successful: " + msg.data.response);
 	}
-	if (msg.data.status == "auth") {
-		console.log("iframe reports that the tramission server requires auth");
-		attack.contentWindow.postMessage({cmd: "stop"}, "*");
-		clearInterval(timer);
-		alert("Transmission Server Requires Authentication - Not Vulnerable");
-	}
 });
 
 function reloadFrame() {

