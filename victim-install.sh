@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# This script should be run on the victime machine.
+# This script should be run on the victim machine.
 # It will install all the required dependencies to build a vulnerable version
 # of Transmission (ie. < v2.93)
 #
@@ -35,7 +35,8 @@ sudo apt -y -qq install \
 	libevent-dev \
 	libminiupnpc-dev \
 	libgtk-3-dev \
-	libappindicator3-dev
+	libappindicator3-dev \
+	net-tools
 
 cd $HOME
 
@@ -98,5 +99,8 @@ cd $HOME
 
 echo "-> Cleaning up..."
 rm -rf transmission
+
+echo "-> Setting IP to 10.0.2.20"
+sudo ifconfig enp0s3 10.0.2.20 netmask 255.255.255.0
 
 echo "-> DONE!"
