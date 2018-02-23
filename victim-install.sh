@@ -7,6 +7,19 @@
 #
 set -e
 
+cat <<EOF
+# This script will install a version of Transmission that is vulnerable to
+# DNS Rebinding attacks.
+# This could allow attackers to cause your Transmission client to start
+# downloads of arbitrary files to arbitrary location, which may lead to code
+# execution...
+#
+# Press Any key to continue with installation
+# Ctrl-C to Cancel
+EOF
+
+read -n 1 -s
+
 echo "-> Installing required dependencies..."
 sudo apt -qq update
 sudo apt -y -qq install \
@@ -64,11 +77,11 @@ echo "-> Checking if ~/.mozilla/firefox exists..."
 if [ ! -d "${HOME}/.mozilla/firefox" ]; then
 	echo "-> Firefox has never been started..."
 	echo "-> Starting firefox to create default configuration files..."
-	firefox & FIREFOX_PID="$!"
+	nohup firefox > /dev/null 2>&1 & FIREFOX_PID="$!"
 	echo "-> Sleeping while firefox starts..."
 	sleep 5
 	echo "-> Killing firefox..."
-	kill $FIREFOX_PID
+	kill $FIREFOX_PID > /dev/null
 else
 	echo "-> ~/.mozilla/firefox exists!"
 fi
