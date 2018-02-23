@@ -32,8 +32,8 @@ cd transmission
 
 GIT_COMMIT="c8696df516fa92ee143f9b6e07b97a50558f628f"
 echo "Checking out vulnerable version (${GIT_COMMIT})"
-git checkout ${GIT_COMMIT}
-git checkout -b vuln
+git checkout -q ${GIT_COMMIT}
+git checkout -q -b vuln
 
 echo "-> Cloning submodules..."
 git submodule -q update --init
@@ -46,10 +46,10 @@ echo "-> Running cmake..."
 cmake .. > /dev/null
 
 echo "-> Running make..."
-make --quiet
+make --quiet > /dev/null
 
 echo "-> Running sudo make install"
-sudo make --quiet install
+sudo make --quiet install > /dev/null
 
 echo "-> Starting transmission-daemon"
 transmission-daemon
