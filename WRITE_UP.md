@@ -17,6 +17,10 @@
 
 ##### Block DNS resolving to private IPs (`dnswall`)
 
+##### Dropping requests where the HTTP host header of a request is not part of your domain
+
+##### Firefox NoScript extension? - partial protection (for private networks) with its ABE feature
+
 ##### other countermeasure...
 
 ### Conslusion
