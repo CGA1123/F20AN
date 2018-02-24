@@ -29,14 +29,9 @@ EOF
 
 sudo ifup enp0s3
 
-echo "-> Starting webserver on port 80"
-echo "->	(This will server the attack 'landing' page)"
-echo "->	(output logged to ./http.server.80.log)"
-sudo python3 -m http.server 80 > ${HOME}/F20AN/http.server.80.log 2>&1 &
-
 echo "-> Starting webserver on port 9091"
 echo "->	(This will serve the attack payload and run the exploit)"
 echo "->	(output logged to ./http.server.9091.log)"
-python3 -m http.server 9091 > ${HOME}/F20AN/http.server.9091.log 2>&1 &
+python3 -m http.server 9091
 
 echo "-> DONE!"
