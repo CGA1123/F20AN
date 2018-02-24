@@ -2,14 +2,12 @@
 
 #
 # This script should be run on the attacker machine.
-# It will install required dependencies to carry out an attack against a victim
-# running a vulnerable version of the Transmission bittorrent client.
 #
 
 set -e
 cat <<EOF
-# This script will install and set up this machine to server malicious webpages
-# that may lead to code execution on vulnerable hosts.
+# This script will set up this machine to server malicious webpages that may
+# lead to code execution on vulnerable hosts.
 #
 # Press Any key to continue with installation
 # Ctrl-C to cancel

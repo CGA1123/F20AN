@@ -5,6 +5,10 @@
 # It will install all the required dependencies to build a vulnerable version
 # of Transmission (ie. < v2.93)
 #
+# It will also change some Firefox settings related to DNS caching to make the
+# attack run faster.
+#
+
 set -e
 
 cat <<EOF
@@ -39,7 +43,7 @@ sudo apt -y -qq install \
 
 cd $HOME
 
-echo "-> Cloning transmission/transmission"
+echo "-> Cloning transmission/transmission (this might take a while...)"
 git clone -q https://github.com/transmission/transmission.git
 cd transmission
 
@@ -87,6 +91,7 @@ else
 fi
 
 
+echo "-> Setting up some firefox settings that make attack run faster..."
 USER_PREFS="${HOME}/.mozilla/firefox/*.default"
 cd $USER_PREFS
 touch user.js
