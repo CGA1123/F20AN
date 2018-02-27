@@ -1,0 +1,280 @@
+PWD D:/Documents/BSc Computer Science/Advanced Network Security/Coursework Report
+INPUT C:/Users/ryank/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+INPUT report.tex
+OUTPUT report.log
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/report.cls
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/report.cls
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/size11.clo
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/size11.clo
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/setspace/setspace.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/setspace/setspace.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/caption.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/caption.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/caption3.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/caption3.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/subcaption.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/subcaption.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/titlesec/titlesec.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/titlesec/titlesec.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tocbibind/tocbibind.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tocbibind/tocbibind.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/colortbl/colortbl.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/colortbl/colortbl.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/array.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/array.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/longtable.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/longtable.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/hhline.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/hhline.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/float/float.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/float/float.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/afterpage.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/afterpage.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/rotating.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/rotating.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ifthen.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ifthen.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/enumitem/enumitem.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/enumitem/enumitem.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1095.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mathdesign.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mathdesign.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/mdbch.cfg
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/mdbch.cfg
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/mdbch.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/mdbch.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdfont.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdfont.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdsffont.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdsffont.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdttfont.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdttfont.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/xkeyval/xkeyval.tex
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/xkeyval/xkvutils.tex
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/t1mdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/t1mdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT report.aux
+INPUT report.aux
+INPUT section/intro.aux
+INPUT section/intro.aux
+INPUT section/sop.aux
+INPUT section/sop.aux
+INPUT section/dns.aux
+INPUT section/dns.aux
+INPUT section/rebinding.aux
+INPUT section/rebinding.aux
+INPUT section/implementation.aux
+INPUT section/implementation.aux
+INPUT section/countermeasures.aux
+INPUT section/countermeasures.aux
+INPUT section/conclusion.aux
+INPUT section/conclusion.aux
+OUTPUT report.aux
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdacmr.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdacmr.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbcmr.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbcmr.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/infwarerr.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/infwarerr.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ltxcmds.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ltxcmds.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/kvsetkeys.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/kvsetkeys.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/etexcmds.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/etexcmds.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/ltcaption.sty
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/caption/ltcaption.sty
+INPUT img/logo.png
+INPUT ./img/logo.png
+OUTPUT report.pdf
+INPUT ./img/logo.png
+INPUT ./img/logo.png
+INPUT ./img/logo.png
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchrfc8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchrfc8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchrfc8t.vf
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8t.tfm
+INPUT C:/Users/ryank/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchr8t.vf
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr8t.tfm
+INPUT report.toc
+INPUT report.toc
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchb8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/ot1mdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/ot1mdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/omlmdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/omlmdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchri7m.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchri7m.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchri7m.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/omsmdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/omsmdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/omxmdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/omxmdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7v.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7v.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7v.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7m.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7m.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr7m.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/mdamdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/mdamdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchrma.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchrma.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchrma.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/mdbmdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/tex/latex/mathdesign/mdbch/mdbmdbch.fd
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchrmb.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchrmb.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchrmb.tfm
+OUTPUT report.toc
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchr8t.vf
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchb8t.vf
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chb8y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chb8t.tfm
+OUTPUT section/intro.aux
+INPUT section/intro.tex
+INPUT section/intro.tex
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchr8t.vf
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr8t.tfm
+OUTPUT section/sop.aux
+INPUT section/sop.tex
+INPUT section/sop.tex
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchri8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchri8t.vf
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chri8y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chri8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchr7y.vf
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chr7y.tfm
+OUTPUT section/dns.aux
+INPUT section/dns.tex
+INPUT section/dns.tex
+OUTPUT section/rebinding.aux
+INPUT section/rebinding.tex
+INPUT section/rebinding.tex
+INPUT img/dnsrebindingflow.jpg
+INPUT ./img/dnsrebindingflow.jpg
+INPUT ./img/dnsrebindingflow.jpg
+INPUT ./img/dnsrebindingflow.jpg
+INPUT ./img/dnsrebindingflow.jpg
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchb8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchr8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/mdbchb8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchb8t.vf
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chb8y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chb8t.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/mathdesign/mdbch/mdbchb8t.vf
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chb8y.tfm
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/mathdesign/mdbch/md-chb8t.tfm
+OUTPUT section/implementation.aux
+INPUT section/implementation.tex
+INPUT section/implementation.tex
+OUTPUT section/countermeasures.aux
+INPUT section/countermeasures.tex
+INPUT section/countermeasures.tex
+OUTPUT section/conclusion.aux
+INPUT section/conclusion.tex
+INPUT section/conclusion.tex
+INPUT report.bbl
+INPUT report.bbl
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ectt1095.tfm
+INPUT report.aux
+INPUT section/intro.aux
+INPUT section/intro.aux
+INPUT section/sop.aux
+INPUT section/sop.aux
+INPUT section/dns.aux
+INPUT section/dns.aux
+INPUT section/rebinding.aux
+INPUT section/rebinding.aux
+INPUT section/implementation.aux
+INPUT section/implementation.aux
+INPUT section/countermeasures.aux
+INPUT section/countermeasures.aux
+INPUT section/conclusion.aux
+INPUT section/conclusion.aux
+INPUT C:/Users/ryank/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi643/ectt1095.pk
+INPUT C:/Users/ryank/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi643/ectt1095.pk
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/ly1/texnansi.enc
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchb8a.pfb
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchb8a.pfb
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchr8a.pfb
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchr8a.pfb
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchri8a.pfb
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchri8a.pfb
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7y.pfb
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7y.pfb
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr8t.pfb
+INPUT D:/Users/ryank/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr8t.pfb

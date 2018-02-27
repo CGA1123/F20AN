@@ -1,0 +1,11 @@
+\contentsline {chapter}{\numberline {1}Introduction}{2}
+\contentsline {chapter}{\numberline {2}Same-Origin Policy (SOP)}{3}
+\contentsline {chapter}{\numberline {3}Domain Name System (DNS)}{4}
+\contentsline {chapter}{\numberline {4}DNS Rebinding}{5}
+\contentsline {section}{\numberline {4.1}Types of DNS Rebinding}{6}
+\contentsline {subsection}{\numberline {4.1.1}Multiple A Records}{6}
+\contentsline {subsection}{\numberline {4.1.2}Time-Varying DNS}{6}
+\contentsline {chapter}{\numberline {5}Implementing DNS Rebinding}{7}
+\contentsline {chapter}{\numberline {6}DNS Rebinding Countermeasures}{8}
+\contentsline {chapter}{\numberline {7}Conclusion}{9}
+\contentsline {chapter}{References}{10}
