@@ -1,3 +1,5 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: report.aux
 A level-1 auxiliary file: section/intro.aux
 A level-1 auxiliary file: section/sop.aux
@@ -8,3 +10,44 @@ A level-1 auxiliary file: section/countermeasures.aux
 A level-1 auxiliary file: section/conclusion.aux
 The style file: unsrt.bst
 Database file #1: references.bib
+You've used 4 entries,
+            1791 wiz_defined-function locations,
+            468 strings with 4129 characters,
+and the built_in function-call counts, 559 in all, are:
+= -- 44
+> -- 20
+< -- 0
++ -- 9
+- -- 5
+* -- 21
+:= -- 81
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 24
+empty$ -- 73
+format.name$ -- 5
+if$ -- 132
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 1
+newline$ -- 23
+num.names$ -- 1
+pop$ -- 25
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 12
+stack$ -- 0
+substring$ -- 3
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 2
+width$ -- 5
+write$ -- 40

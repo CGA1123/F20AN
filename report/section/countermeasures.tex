@@ -1,1 +1,59 @@
 \chapter{DNS Rebinding Countermeasures}
+
+There have been attempts made to eradicate DNS rebinding, but only
+a few methods have been proven effective at mitigating the effects
+or stopping it entirely.
+
+\section{Extended Same-Origin Policy}
+
+https://www.usenix.org/conference/usenixsecurity13/technical-sessions/presentation/johns
+
+\section{DNS Pinning}
+
+Explain what DNS pinning is...
+
+DNS Pinning however has been deprecated. This is because load balancing
+provided by DNS is vital for major web servers and DNS pinning
+interferes with load balancing.
+
+HF-"However, some sort of verification may be implemented to ensure that each site within a multi-answer DNS response is apart of that domain."
+
+\section{DNS Filtering}
+
+Another technique used to prevent DNS rebinding attacks includes
+filtering out private IP addresses from DNS responses, which can be
+done in a number of ways.
+
+\subsection{Filtering through external DNS servers}
+
+OpenDNS is a service that extends the DNS by adding several security
+features, in addition to regular DNS services. One of these features
+includes optional content filtering and the ability to filter out
+IP addresses from DNS responses. It supports a protocol which
+authenticates traffic that moves between a host computer and the
+OpenDNS nameservers, called the DNSCrypt protocol.
+
+\subsection{Local nameserver configuration}
+
+System admins can configure their organisation's local nameservers
+such that external names cannot be resolved/mapped to the organisation's
+internal IP addresses. This is a useful technique to prevent against
+DNS rebinding, however a potential attacker could map the internal
+IP address ranges that the organisation is currently using.
+
+\subsection{DNS filtering in a firewall}
+
+dnswall?
+
+\section{Router Configuration}
+
+DNS Rebinding attacks have been stopped more successfully through
+more secure router configurations. Services, such as the HTTP server
+on a router, are bound to all network interfaces and can be accessible
+by all IP addresses in a range that it has. The routers drop anything
+that comes in through the external port, which doesn't matter because
+it accesses external IP addresses from the internal Local Area Network (LAN).
+
+\section{Firefox NoScript Extension}
+
+??
