@@ -5,13 +5,14 @@
 \contentsline {section}{\numberline {4.1}Types of DNS Rebinding}{6}
 \contentsline {subsection}{\numberline {4.1.1}Multiple A Records}{6}
 \contentsline {subsection}{\numberline {4.1.2}Time-Varying DNS}{6}
+\contentsline {section}{\numberline {4.2}Motives}{6}
 \contentsline {chapter}{\numberline {5}Implementing DNS Rebinding}{7}
 \contentsline {chapter}{\numberline {6}DNS Rebinding Countermeasures}{8}
 \contentsline {section}{\numberline {6.1}Extended Same-Origin Policy}{8}
 \contentsline {section}{\numberline {6.2}DNS Pinning}{8}
 \contentsline {section}{\numberline {6.3}DNS Filtering}{8}
 \contentsline {subsection}{\numberline {6.3.1}Filtering through external DNS servers}{8}
-\contentsline {subsection}{\numberline {6.3.2}Local nameserver configuration}{8}
+\contentsline {subsection}{\numberline {6.3.2}Local nameserver configuration}{9}
 \contentsline {subsection}{\numberline {6.3.3}DNS filtering in a firewall}{9}
 \contentsline {section}{\numberline {6.4}Router Configuration}{9}
 \contentsline {section}{\numberline {6.5}Firefox NoScript Extension}{9}

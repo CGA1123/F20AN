@@ -20,4 +20,9 @@ Bypass same origin policy - by-sop (github).
 \newblock \url{https://github.com/mpgn/ByP-SOP}.
 \newblock Accessed: 27/02/2018.
 
+\bibitem{johns2013eradicating}
+Martin Johns, Sebastian Lekies, and Ben Stock.
+\newblock Eradicating dns rebinding with the extended same-origin policy.
+\newblock In {\em USENIX security symposium}, pages 621--636, 2013.
+
 \end{thebibliography}

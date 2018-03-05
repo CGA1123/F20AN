@@ -6,17 +6,26 @@ or stopping it entirely.
 
 \section{Extended Same-Origin Policy}
 
-https://www.usenix.org/conference/usenixsecurity13/technical-sessions/presentation/johns
+With early iterations of the Same-Origin policy, many variations of
+DNS rebinding attacks would exploit the policy. To counter this, web
+browsers implemented countermeasures (as described in this section) to
+protect resources. The Same-Origin policy relies on information
+obtained from the DNS, which may not be under control of the owners
+of a web server. Therefore a light-weight extension to the policy,
+called the Extended Same-Origin policy, was made to also take into
+account information provided by a web server to avoid exploitation by
+DNS rebinding\textsuperscript{\cite{johns2013eradicating}}.
 
 \section{DNS Pinning}
 
-Explain what DNS pinning is...
-
-DNS Pinning however has been deprecated. This is because load balancing
-provided by DNS is vital for major web servers and DNS pinning
-interferes with load balancing.
-
-HF-"However, some sort of verification may be implemented to ensure that each site within a multi-answer DNS response is apart of that domain."
+DNS Pinning is a technique web browsers implement, which locks an IP
+address to the value provided by the initial DNS response. It has
+however has been deprecated due to it unintentionally blocking a
+few legitimate uses of Dynamic DNS. An example is load balancing,
+which is a service provided by DNS. Load balancing is vital for
+major web servers and DNS pinning interferes with this. As well as
+this, DNS pinning does not protect against \textbf{sophisticated}
+DNS rebinding attacks.
 
 \section{DNS Filtering}
 
