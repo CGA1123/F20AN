@@ -13,12 +13,11 @@ as a combination of:
 
 Without this policy, an attacker can obtain access to sensitive data. For
 example, assume that an individual is using a website that handles personal
-data
-such as a social networking site. Without SOP, and assuming the individual
-visits a malicious website in another browser tab, JavaScript on that website
-can do anything on the social network account that the person would be able to
-do, such as reading private messages and analysing the HTML DOM-tree after
-the person entered their password before submitting the form.
+data such as a social networking site. Without SOP, and assuming the
+individual visits a malicious website in another browser tab, JavaScript on
+that website can do anything on the social network account that the person
+would be able to do, such as reading private messages and analysing the HTML
+DOM-tree after the person entered their password before submitting the form.
 
 Taking this example, and applying it to a scenario involving online banking, it
 can be easily understood that the policy is essential.
@@ -26,4 +25,4 @@ can be easily understood that the policy is essential.
 Many application developers rely on the SOP for security, expecting it to
 disregard requests that do not come from the same origin. However, people do
 not realise that DNS Rebinding can circumvent this by binding a hostname to
-any address (including private network addresses such as 127.0.0.1).
+any address (including private network addresses such as \texttt{127.0.0.1}).

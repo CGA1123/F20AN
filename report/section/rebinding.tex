@@ -2,7 +2,7 @@
 
 DNS rebinding is a computer attack, by which an attacker subverts the
 same-origin policy of browsers, this can effectively convert the browser into
-an open network proxy \cite{jackson2009protecting}.
+an open network proxy~\cite{jackson2009protecting}.
 
 \vspace{0.5cm}
 
@@ -10,7 +10,7 @@ an open network proxy \cite{jackson2009protecting}.
 \begin{center}
 \includegraphics[width=0.59\textwidth,keepaspectratio]
 {img/dnsrebindingflow.jpg}
-	\caption{DNS Rebinding Flow Diagram (Taken from \cite{vulnsec})}
+	\caption{DNS Rebinding Flow Diagram (Taken from~\cite{vulnsec})}
 \end{center}
 \end{figure}
 
@@ -34,8 +34,8 @@ to originate from \texttt{127.0.0.1} effectively bypassing the SOP.
 If an application relies on the SOP only for security, and does not explicitly
 check Host headers, this can constitute to a security vulnerability. Our
 implementation attacks a (now-patched) vulnerable version on the popular
-Transmission \cite{transmission} torrent client, which leads arbitrary code
-execution (See \S\ref{implementation} for details).
+Transmission~\cite{transmission} torrent client, which leads arbitrary code
+execution (See~\S\ref{implementation} for details).
  
 \section{Types of DNS Rebinding}
 
