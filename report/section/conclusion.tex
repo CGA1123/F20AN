@@ -1,1 +1,31 @@
 \chapter{Conclusion}
+
+DNS Rebinding attacks are interesting mostly because many application
+developers are not aware of them, and do not take into account that services
+running on a private network can still be accessed by external network by this
+method. Many large applications (such as Transmission~\cite{tavis_report}, the
+Battle.net Update Agent~\cite{battle_net_vuln},
+$\mu$Torrent~\cite{utorrent_vuln})
+have been found to be vulnerable to being exploited through this method, even
+though this type of vulnerability has been known for almost over a decade
+now~\cite{jackson2009protecting}.
+
+While our implementation focuses on the Transmission BitTorrent client, the
+implementation is rather general and could be changed with relative ease to
+send requests to a different service. What is also interesting is that this
+type of attack could conceptually very easily be done on websites without
+their explicit knowledge, either perhaps though advertisements or by exploiting
+a cross-site scripting attack.
+
+Great care needs to be taken by users and developers when using/creating
+applications that offer a web client to manage a local application, this type
+of design which allows for great customisation of interfaces through the use of
+HTML, CSS, and JavaScript, may also lead to exploitation through the methods
+described in this project.
+
+Because this is a protocol level `flaw', it relies heavily on application
+developers to become aware of this potential vulnerability and develop
+safeguards against it. While the DNS filtering countermeasures discussed in
+\S\ref{dns_filtering} may be suitable for some networks or organisations, there
+may be legitimate reason why a hostname may need to resolve to private IP
+addresses, meaning this cannot be a universal solution to this problem.

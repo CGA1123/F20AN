@@ -35,11 +35,12 @@ however has been deprecated due to it unintentionally blocking a
 few legitimate uses of Dynamic DNS. An example is load balancing,
 which is a service provided by DNS. Load balancing is vital for
 major web servers and DNS pinning interferes with this.
-As well as this DNS pinning does not protect against \textbf{sophisticated}
+As well as this, DNS pinning does not protect against sophisticated
 DNS rebinding attacks, for example attacks that use iframes to subvert DNS
 pinning.
 
 \section{DNS Filtering}
+\label{dns_filtering}
 
 Another technique used to prevent DNS rebinding attacks includes
 filtering out private IP addresses from DNS responses, which can be
