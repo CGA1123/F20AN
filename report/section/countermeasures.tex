@@ -18,14 +18,14 @@ DNS rebinding~\cite{johns2013eradicating}.
 
 \vspace{0.5cm}
 
-Johns, Lekies and Stock describes the new Extended Same-Origin policy
-as differing~\cite{johns2013eradicating} from the original policy by using input provided by the
-web server, which is "delivered through an HTTP reponse header" in the
-form of { protocol, domain, port, server-origin }. Since DNS rebinding is
-a protocol-level flaw, the Extended Same-Origin policy adds more to the
-prevention of SOP by using the provided server origin information in the
-HTTP response header. If the header is not sent, then the browser will fall
-back to using the original policy.
+Johns, Lekies and Stock~\cite{johns2013eradicating} describe the new Extended
+Same-Origin policy as differing from the original policy by using input
+provided by the web server, which is "delivered through an HTTP response
+header" in the form of { protocol, domain, port, server-origin }. Since DNS
+rebinding is a protocol-level flaw, the Extended Same-Origin policy adds more
+to the prevention of the SOP by using the provided server origin information in
+the HTTP response header. If the header is not sent, then the browser will
+fall back to using the original policy.
 
 \section{DNS Pinning}
 
@@ -35,8 +35,9 @@ however has been deprecated due to it unintentionally blocking a
 few legitimate uses of Dynamic DNS. An example is load balancing,
 which is a service provided by DNS. Load balancing is vital for
 major web servers and DNS pinning interferes with this.
-As well as this DNS pinning does not protect against \textbf{sophisticated} DNS
-rebinding attacks, for example attacks that use iframes to subvert DNS pinning.
+As well as this DNS pinning does not protect against \textbf{sophisticated}
+DNS rebinding attacks, for example attacks that use iframes to subvert DNS
+pinning.
 
 \section{DNS Filtering}
 
@@ -72,8 +73,8 @@ to internal IP addresses".
 \section{Application-level filtering}
 
 Another preventative procedure to counter DNS rebinding is application-level
-filtering. This involves writing application code to filter IP addresses
-that are considered "acceptable". A pull request~\cite{transmission_pr} on the
-Transmission Bittorrent client repository describes, in their application code,
-a whitelist which allows localhost and ip addresses but refuses to accept
-external host names.
+filtering. This involves creating a whitelist of trusted/allowed hostnames and
+then checking the HTTP request \texttt{Host} header against it and filtering
+requests based on this. This is the method used to patch the vulnerability
+which we exploit in this project (this patch can be seen on GitHub pull
+request \texttt{transmission/transmission\#468}~\cite{transmission_pr}).

@@ -1,7 +1,7 @@
-\chapter{Implementation of Attack Using DNS Rebinding}
+\chapter{Implementation of A DNS Rebinding Attack}
 \label{implementation}
 
-In this coursework we attack the Transmission (\texttt{< v2.9.3}) bittorrent
+In this coursework we attack the Transmission (pre \texttt{v2.9.3}) bittorrent
 client. We use DNS Rebinding to exploit a (now patched~\cite{transmission_pr})
 vulnerability discovered by Tavis Ormandy.
 
@@ -14,7 +14,7 @@ allowed to. Through DNS Rebinding request can be made to look as though they
 originate from any IP address, in our case we choose \texttt{127.0.0.1} (the
 IPv4 loopback interface).
 
-Our implementation\footnote{Our project is available at:
+Our implementation\footnote{Available at:
 \url{https://github.com/CGA1123/F20AN}} makes use of
 \texttt{rbndr}~\cite{rbndr} a DNS rebinding service created explicitly for
 testing of DNS rebinding vulnerabilities by Tavis Ormandy. It implements
