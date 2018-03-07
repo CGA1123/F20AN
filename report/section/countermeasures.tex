@@ -16,6 +16,17 @@ called the Extended Same-Origin policy, was made to also take into
 account information provided by a web server to avoid exploitation by
 DNS rebinding~\cite{johns2013eradicating}.
 
+\vspace{0.5cm}
+
+Johns, Lekies and Stock describes the new Extended Same-Origin policy
+as differing~\cite{johns2013eradicating} from the original policy by using input provided by the
+web server, which is "delivered through an HTTP reponse header" in the
+form of { protocol, domain, port, server-origin }. Since DNS rebinding is
+a protocol-level flaw, the Extended Same-Origin policy adds more to the
+prevention of SOP by using the provided server origin information in the
+HTTP response header. If the header is not sent, then the browser will fall
+back to using the original policy.
+
 \section{DNS Pinning}
 
 DNS Pinning is a technique web browsers implement, which locks an IP
@@ -23,9 +34,9 @@ address to the value provided by the initial DNS response. It has
 however has been deprecated due to it unintentionally blocking a
 few legitimate uses of Dynamic DNS. An example is load balancing,
 which is a service provided by DNS. Load balancing is vital for
-major web servers and DNS pinning interferes with this. As well as
-this, DNS pinning does not protect against \textbf{sophisticated}
-DNS rebinding attacks.
+major web servers and DNS pinning interferes with this.
+As well as this DNS pinning does not protect against \textbf{sophisticated} DNS
+rebinding attacks, for example attacks that use iframes to subvert DNS pinning.
 
 \section{DNS Filtering}
 
@@ -50,15 +61,19 @@ internal IP addresses. This is a useful technique to prevent against
 DNS rebinding, however a potential attacker could map the internal
 IP address ranges that the organisation is currently using.
 
-\subsection{DNS filtering in a firewall}
+Jackson et Al. describe their production of a C program, called
+dnswall~\cite{jackson2009protecting}, which is used to prevent external
+host names from being resolved to internal IP addresses. This is an effective
+countermeasure as, with the prevention of resolving host names,
+DNS rebinding cannot be used to bypass firewalls. More specifically,
+dnswall "modifies DNS responses that attempt to bind external [host] names
+to internal IP addresses".
 
-dnswall?
+\section{Application-level filtering}
 
-\section{Router Configuration}
-
-DNS Rebinding attacks have been stopped more successfully through
-more secure router configurations. Services, such as the HTTP server
-on a router, are bound to all network interfaces and can be accessible
-by all IP addresses in a range that it has. The routers drop anything
-that comes in through the external port, which doesn't matter because
-it accesses external IP addresses from the internal Local Area Network (LAN).
+Another preventative procedure to counter DNS rebinding is application-level
+filtering. This involves writing application code to filter IP addresses
+that are considered "acceptable". A pull request~\cite{transmission_pr} on the
+Transmission Bittorrent client repository describes, in their application code,
+a whitelist which allows localhost and ip addresses but refuses to accept
+external host names.
