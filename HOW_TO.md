@@ -36,7 +36,8 @@ This document provides a step-by-step guide of how to set up two virtual machine
 
 - Install `git`: `sudo apt install git`
 - Clone this repo: `git clone https://github.com/CGA1123/F20AN.git $HOME/F20AN`
-- Run the installation script from `$HOME`: `cd $HOME; ./F20AN/victim-install.sh`
+- Change directory into `F20AN`: `cd $HOME/F20AN`
+- Run the installation script: `./victim-install.sh` (this may take a while)
 - Everything should install and the script *should* exit successfully!
 
 ### Attacker Installation/Configuration
@@ -47,15 +48,15 @@ This document provides a step-by-step guide of how to set up two virtual machine
 
 - Install `git`: `sudo apt install git`
 - Clone this repo: `git clone https://github.com/CGA1123/F20AN.git $HOME/F20AN`
-- Run the installation script: `cd F20AN; ./attacker-install.sh`
-- Run a http server on post 80 that will serve a `attack.sh` file
-- (One is provided in the F20AN root and can be served by running `sudo python -m http.server 80`)
+- Change directory into `F20AN`: `cd $HOME/F20AN`
+- Run the installation script: `./attacker-install.sh`
+- Run a http server on port 80: `cd www; sudo python3 -m http.server 80`
 
 Your VMs are now set up!
 
 ### Running attack
 
-From the victim machine open firefox and go to `http://10.0.2.30:9091` or just `http://10.0.2.30` if you ran a server on port 80 from the repo root
+From the victim machine open firefox and go to `http://10.0.2.30`
 
 Click the `Start Attack` button, the iFrame should show the following either directly of after a few seconds:
 
