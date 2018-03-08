@@ -1,0 +1,29 @@
+\chapter{Same-Origin Policy (SOP)}
+
+The same-origin policy is a security mechanism of modern browsers, which
+controls the communication between scripts running in a browser. Scripts that
+are contained within a web page are permitted to access data in another web
+page, so long as they both have the same \emph{origin}. The origin is defined
+as a combination of:
+\begin{itemize}
+	\item{URI scheme (http(s), ftp, file, etc.)}
+	\item{Host name}
+	\item{Port number (21, 80, 9091, etc.)}
+\end{itemize}
+
+Without this policy, an attacker can obtain access to sensitive data. For
+example, assume that an individual is using a website that handles personal
+data such as a social networking site. Without SOP, and assuming the
+individual visits a malicious website in another browser tab, JavaScript on
+that website can do anything on the social network account that the person
+would be able to do, such as reading private messages and analysing the HTML
+DOM-tree after the person entered their password before submitting the form.
+Taking this example, and applying it to a scenario involving online banking, it
+can be easily understood that the policy is essential.
+
+\vspace{0.5cm}
+
+Many application developers rely on the SOP for security, expecting it to
+disregard requests that do not come from the same origin. However, people do
+not realise that DNS Rebinding can circumvent this by binding a hostname to
+any address (including private network addresses such as \texttt{127.0.0.1}).

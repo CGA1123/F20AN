@@ -1,0 +1,81 @@
+\chapter{DNS Rebinding Countermeasures}
+
+There have been attempts made to eradicate DNS rebinding, but only
+a few methods have been proven effective at mitigating the effects
+or stopping it entirely.
+
+\section{Extended Same-Origin Policy}
+
+With early iterations of the Same-Origin policy, many variations of
+DNS rebinding attacks would exploit the policy. To counter this, web
+browsers implemented countermeasures (as described in this section) to
+protect resources. The Same-Origin policy relies on information
+obtained from the DNS, which may not be under control of the owners
+of a web server. Therefore a light-weight extension to the policy,
+called the Extended Same-Origin policy, was made to also take into
+account information provided by a web server to avoid exploitation by
+DNS rebinding~\cite{johns2013eradicating}.
+
+\vspace{0.5cm}
+
+Johns, Lekies and Stock~\cite{johns2013eradicating} describe the new Extended
+Same-Origin policy as differing from the original policy by using input
+provided by the web server, which is "delivered through an HTTP response
+header" in the form of { protocol, domain, port, server-origin }. Since DNS
+rebinding is a protocol-level flaw, the Extended Same-Origin policy adds more
+to the prevention of the SOP by using the provided server origin information in
+the HTTP response header. If the header is not sent, then the browser will
+fall back to using the original policy.
+
+\section{DNS Pinning}
+
+DNS Pinning is a technique web browsers implement, which locks an IP
+address to the value provided by the initial DNS response. It has
+however has been deprecated due to it unintentionally blocking a
+few legitimate uses of Dynamic DNS. An example is load balancing,
+which is a service provided by DNS. Load balancing is vital for
+major web servers and DNS pinning interferes with this.
+As well as this, DNS pinning does not protect against sophisticated
+DNS rebinding attacks, for example attacks that use iframes to subvert DNS
+pinning.
+
+\section{DNS Filtering}
+\label{dns_filtering}
+
+Another technique used to prevent DNS rebinding attacks includes
+filtering out private IP addresses from DNS responses, which can be
+done in a number of ways.
+
+\subsection{Filtering through external DNS servers}
+
+OpenDNS is a service that extends the DNS by adding several security
+features, in addition to regular DNS services. One of these features
+includes optional content filtering and the ability to filter out
+IP addresses from DNS responses. It supports a protocol which
+authenticates traffic that moves between a host computer and the
+OpenDNS nameservers, called the DNSCrypt protocol.
+
+\subsection{Local nameserver configuration}
+
+System admins can configure their organisation's local nameservers
+such that external names cannot be resolved/mapped to the organisation's
+internal IP addresses. This is a useful technique to prevent against
+DNS rebinding, however a potential attacker could map the internal
+IP address ranges that the organisation is currently using.
+
+Jackson et Al. describe their production of a C program, called
+dnswall~\cite{jackson2009protecting}, which is used to prevent external
+host names from being resolved to internal IP addresses. This is an effective
+countermeasure as, with the prevention of resolving host names,
+DNS rebinding cannot be used to bypass firewalls. More specifically,
+dnswall "modifies DNS responses that attempt to bind external [host] names
+to internal IP addresses".
+
+\section{Application-level filtering}
+
+Another preventative procedure to counter DNS rebinding is application-level
+filtering. This involves creating a whitelist of trusted/allowed hostnames and
+then checking the HTTP request \texttt{Host} header against it and filtering
+requests based on this. This is the method used to patch the vulnerability
+which we exploit in this project (this patch can be seen on GitHub pull
+request \texttt{transmission/transmission\#468}~\cite{transmission_pr}).

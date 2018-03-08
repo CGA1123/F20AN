@@ -1,0 +1,18 @@
+\chapter{Introduction}
+
+For the coursework assignment, we decided to study DNS rebinding attacks.
+A DNS rebinding attack is an exploit in which an attacker subverts
+the same-origin policy of browsers, by running a client-side script used to
+attack target machines on a network, and converts them into open network
+proxies~\cite{jackson2009protecting}. This allows attackers to
+breach private networks, as well as use a victim machine for distributed
+denial-of-service (DDoS) attacks amongst other malicious activities.
+
+\vspace{0.5cm}
+
+We use a DNS rebinding attack to exploit a vulnerability in the Transmission
+BitTorrent client (pre v2.9.3), which leads to the execution of
+arbitrary code on the target machine running the Bittorrent client. This report
+describes our implementation\footnote{Available at:
+\url{https://github.com/CGA1123/F20AN}} of CVE-2018-5702~\cite{cve20185702}
+a vulnerability which can be exploited through a DNS Rebinding attack.
